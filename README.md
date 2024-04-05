@@ -40,10 +40,6 @@ Contributions to this repository are welcome. Please ensure that you follow the 
 
 For any questions or suggestions, please open an issue or directly contact the maintainers.
 
-## Acknowledgments
-
-- Special thanks to ...
-- Credits to ...
 
 ## License
 
