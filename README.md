@@ -1,8 +1,13 @@
 # Inverse-Design-of-Patch-Antennas
 
 This repository hosts a **simple demonstration** of a deep learning approach for the inverse design of patch antennas. The goal is to explore energy-efficient designs and to significantly reduce simulation costs compared to conventional methods. 
+
 <img src="mlp.png" alt="MLP Diagram" style="width:600px;height:275px;">
 
+The following papers have been published in relation to this repository:
+1. [Inverse Design of Reflective Metasurface Antennas Using Deep Learning from Small-Scale Statistically Random Pico-Cells](https://onlinelibrary.wiley.com/doi/full/10.1002/mop.34068)
+
+2. [Energy Efficient Design of Low-Profile Wideband Microstrip Patch Antennas Using Deep Learning](https://ieeexplore.ieee.org/document/10276793)
 ## Overview
 
 This repository presents a novel inverse design methodology for patch antennas using deep learning techniques. The project encompasses several key components:
@@ -51,9 +56,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Cite
 If you use the code provided in this repository, please cite the following papers:
 
-1. You, X. C., & Lin, F. H. (2023). Energy Efficient Design of Low-Profile Wideband Microstrip Patch Antennas Using Deep Learning. In 2023 International Conference on Microwave and Millimeter Wave Technology (ICMMT), Qingdao, China, 2023, pp. 1-3. [DOI: 10.1109/ICMMT58241.2023.10276793](https://doi.org/10.1109/ICMMT58241.2023.10276793)
+1. You, X. C., & Lin, F. H. (2024). Inverse design of reflective metasurface antennas using deep learning from small-scale statistically random pico-cells. Microwave and Optical Technology Letters, 2024, 66(2), e34068.
 
-2. You, X. C., & Lin, F. H. (2024). Inverse design of reflective metasurface antennas using deep learning from small-scale statistically random pico-cells. Microwave and Optical Technology Letters, 2024, 66(2), e34068.
+2. You, X. C., & Lin, F. H. (2023). Energy Efficient Design of Low-Profile Wideband Microstrip Patch Antennas Using Deep Learning. In 2023 International Conference on Microwave and Millimeter Wave Technology (ICMMT), Qingdao, China, 2023, pp. 1-3. [DOI: 10.1109/ICMMT58241.2023.10276793](https://doi.org/10.1109/ICMMT58241.2023.10276793)
 
 Thank you for your cooperation in acknowledging the original work.
 
