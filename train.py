@@ -159,13 +159,13 @@ pre_y[:, 1:] = -70 * pre_y[:, 1:]
 pre_y[:, 0] = 5 * pre_y[:, 0] + 5
 print(input_test)
 
-# Plot S11
-# for i in range(10):
-#     index = np.random.randint(0, 455)
-#     plt.plot(np.arange(401), output_test[index, 1:], 'black')
-#     plt.plot(np.arange(401), pre_y[index, 1:])
-#     plt.title("Test%d, Index%d" % (i + 1, index))
-#     plt.show()
+Plot S11
+for i in range(10):
+    index = np.random.randint(0, 455)
+    plt.plot(np.arange(401), output_test[index, 1:], 'black')
+    plt.plot(np.arange(401), pre_y[index, 1:])
+    plt.title("Test%d, Index%d" % (i + 1, index))
+    plt.show()
 
 
 
