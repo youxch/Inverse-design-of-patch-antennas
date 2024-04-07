@@ -37,11 +37,13 @@ To get started with this simple demonstration of inverse design for patch antenn
    Run the `train.py` script to preprocess the training data and train the Multilayer Perceptron (MLP) network:
    ```bash
    python train.py
+   ```
    The trained model weights will be saved as `saved-model-5000.h5`, with ‘5000’ indicating the number of iterations or a training metric.
 5. **Model Prediction and Inverse Design**
    Use the `predict.py` script to make predictions and perform inverse design.
    ```bash
    python predict.py
+   ```
    Ensure that the trained model weights file saved-model-5000.h5 is available before running predictions.
 
 ## Contact
