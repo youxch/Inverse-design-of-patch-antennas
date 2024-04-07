@@ -105,20 +105,20 @@ checkpoint = keras.callbacks.ModelCheckpoint(filepath=filepath, monitor="val_los
 
 model.compile(loss='mean_squared_error', optimizer='adam')
 
-# # 训练模型
-# model_fit = model.fit(input_train, output_train, batch_size=512,
-#                       epochs=5000, verbose=0,
-#                       validation_split=0.2,
-#                       callbacks=[checkpoint])
-#                       # callbacks=[early_stopping])
-#
-# # 可视化
-# plt.figure()
-# plt.plot(model_fit.history["loss"])
-# plt.plot(model_fit.history["val_loss"])
-# plt.xlabel("iters")
-# plt.ylabel("loss")
-# plt.show()
+# 训练模型
+model_fit = model.fit(input_train, output_train, batch_size=512,
+                      epochs=5000, verbose=0,
+                      validation_split=0.2,
+                      callbacks=[checkpoint])
+                      # callbacks=[early_stopping])
+
+# 可视化
+plt.figure()
+plt.plot(model_fit.history["loss"])
+plt.plot(model_fit.history["val_loss"])
+plt.xlabel("iters")
+plt.ylabel("loss")
+plt.show()
 
 # 读取模型
 model.load_weights("saved-model-5000.h5")
