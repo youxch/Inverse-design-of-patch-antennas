@@ -168,8 +168,7 @@ print(input_test)
 #     plt.show()
 
 
-#     np.savetxt('D:\Gaoct\Antenna\Project\Figure\Predicted & Simulated_S11_data\S11_simu_' + str(i) + '.txt', output_test[index, 1:])
-#     np.savetxt('D:\Gaoct\Antenna\Project\Figure\Predicted & Simulated_S11_data\S11_pre_' + str(i) + '.txt', pre_y[index, 1:])
+
 
 # Plot Gain
 plt.scatter(np.arange(100), output_test[:100, 0], marker='o', s=40, c='White', edgecolors='r')
