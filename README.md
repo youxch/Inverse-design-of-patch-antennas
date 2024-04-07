@@ -36,6 +36,7 @@ To get started with this simple demonstration of inverse design for patch antenn
    python train.py
    ```
    The trained model weights will be saved as `saved-model-5000.h5`, with ‘5000’ indicating the number of iterations or a training metric.
+   
    <img src="mlp.png" alt="MLP Diagram" style="width:600px;height:275px;">
 6. **Model Prediction and Inverse Design**
    Use the `predict.py` script to make predictions and perform inverse design.
