@@ -12,13 +12,6 @@ This repository presents a novel inverse design methodology for patch antennas u
 - **Prediction**: Utilization of the trained model to predict optimal patch antenna designs.
 - **Inverse Design**: Process of designing patch antennas based on the predictions from the deep learning model.
 
-## Achievements
-
-- **Proposed Method**: A deep learning method is proposed for energy-efficient design of patch antennas.
-- **Simulation Cost Reduction**: Significantly reducing the simulation cost compared to conventional methods.
-- **Designed Antennas**: Three different antennas are designed through the deep learning network.
-- **Experimental Verification**: The machine-designed antennas are experimentally verified showing good agreement with full-wave simulations.
-
 ## Getting Started
 
 To get started with this simple demonstration of inverse design for patch antennas, follow these steps:
