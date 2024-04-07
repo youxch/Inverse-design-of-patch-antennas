@@ -23,23 +23,26 @@ This repository presents a novel inverse design methodology for patch antennas u
 
 To get started with this simple demonstration of inverse design for patch antennas, follow these steps:
 
-1. **Clone the Repository**:
+1. **Clone the Repository**
    Clone this repository to your local machine using the following command:
    ```bash
    git clone https://github.com/username/Inverse-Design-of-Patch-Antennas.git
-
-## Code Files
-
-- **requirements.txt**: Lists all the Python libraries required for the project. Use the command `pip install -r requirements.txt` to install all necessary dependencies.
-
-- **train_data.txt**: Represents the training dataset, which includes the structural parameters of patch antennas and the reflection coefficient and gain data obtained from full-wave simulations. This file is the foundation for training the deep learning model.
-
-- **train.py**: Contains the preprocessing steps for the training data and the training process for the Multilayer Perceptron (MLP) network. Running this script is the entry point for training the model.
-
-- **saved-model-5000.h5**: Stores the weights of the trained model. This file is generated after running the `train.py` script, where 5000 represents the number of iterations or another possible training metric.
-
-- **predict.py**: Contains the steps to use the trained model for predicting large samples and performing inverse design. This script allows users to design new patch antennas based on the model's predictions.
-
+2. **Install Dependencies**
+   Install all necessary dependencies by running:
+   ```bash
+   pip install -r requirements.txt
+3. **Data Preparation**
+   The training dataset is prepared through automated simulations controlled by code, resulting in the `train_data.txt` file which is properly formatted with the structural parameters and simulation results for patch antennas.
+4. **Model Training**
+   Run the `train.py` script to preprocess the training data and train the Multilayer Perceptron (MLP) network:
+   ```bash
+   python train.py
+   The trained model weights will be saved as `saved-model-5000.h5`, with ‘5000’ indicating the number of iterations or a training metric.
+5. **Model Prediction and Inverse Design**
+   Use the `predict.py` script to make predictions and perform inverse design.
+   ```bash
+   python predict.py
+   Ensure that the trained model weights file saved-model-5000.h5 is available before running predictions.
 
 ## Contact
 
