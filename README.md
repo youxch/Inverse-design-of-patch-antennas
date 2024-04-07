@@ -46,3 +46,13 @@ For any questions or suggestions, please open an issue or directly contact the m
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Cite
+If you use the code provided in this repository, please cite the following papers:
+
+1. You, X. C., & Lin, F. H. (2023). Energy Efficient Design of Low-Profile Wideband Microstrip Patch Antennas Using Deep Learning. In 2023 International Conference on Microwave and Millimeter Wave Technology (ICMMT), Qingdao, China, 2023, pp. 1-3. [DOI: 10.1109/ICMMT58241.2023.10276793](https://doi.org/10.1109/ICMMT58241.2023.10276793)
+
+2. You, X. C., & Lin, F. H. (2024). Inverse design of reflective metasurface antennas using deep learning from small-scale statistically random pico-cells. Microwave and Optical Technology Letters, 2024, 66(2), e34068.
+
+Thank you for your cooperation in acknowledging the original work.
+
