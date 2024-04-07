@@ -1,7 +1,7 @@
 # Inverse-Design-of-Patch-Antennas
 
 This repository hosts a **simple demonstration** of a deep learning approach for the inverse design of patch antennas. The goal is to explore energy-efficient designs and to significantly reduce simulation costs compared to conventional methods. 
-<img src="mlp.png" alt="MLP Diagram" style="width:600px;height:300px;">
+<img src="mlp.png" alt="MLP Diagram" style="width:600px;height:250px;">
 
 ## Overview
 
