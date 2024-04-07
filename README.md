@@ -32,6 +32,18 @@ To get started with the inverse design of patch antennas using this repository, 
 7. **Prediction**: Use the trained model to predict new patch antenna designs.
 8. **Inverse Design**: Implement the inverse design process to create new patch antennas based on the predictions.
 
+## Code Files
+
+- **requirements.txt**: Lists all the Python libraries required for the project. Use the command `pip install -r requirements.txt` to install all necessary dependencies.
+
+- **train_data.txt**: Represents the training dataset, which includes the structural parameters of patch antennas and the reflection coefficient and gain data obtained from full-wave simulations. This file is the foundation for training the deep learning model.
+
+- **train.py**: Contains the preprocessing steps for the training data and the training process for the Multilayer Perceptron (MLP) network. Running this script is the entry point for training the model.
+
+- **saved-model-5000.h5**: Stores the weights of the trained model. This file is generated after running the `train.py` script, where 5000 represents the number of iterations or another possible training metric.
+
+- **predict.py**: Contains the steps to use the trained model for predicting large samples and performing inverse design. This script allows users to design new patch antennas based on the model's predictions.
+
 ## Contributing
 
 Contributions to this repository are welcome. Please ensure that you follow the coding standards and provide comprehensive documentation for any new features or modifications.
@@ -40,8 +52,6 @@ Contributions to this repository are welcome. Please ensure that you follow the 
 
 For any questions or suggestions, please open an issue or directly contact the maintainers.
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
