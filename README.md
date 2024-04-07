@@ -1,8 +1,6 @@
 # Inverse-Design-of-Patch-Antennas
 
-This repository hosts a **simple demonstration** of a deep learning approach for the inverse design of patch antennas. The goal is to explore energy-efficient designs and to significantly reduce simulation costs compared to conventional methods. 
-
-<img src="mlp.png" alt="MLP Diagram" style="width:600px;height:275px;">
+This repository hosts a **simple demonstration** of a deep learning approach for the inverse design of patch antennas. The goal is to explore energy-efficient designs and to significantly reduce simulation cost compared to conventional methods. 
 
 The following papers have been published in relation to this repository:
 1. [Inverse Design of Reflective Metasurface Antennas Using Deep Learning from Small-Scale Statistically Random Pico-Cells](https://onlinelibrary.wiley.com/doi/full/10.1002/mop.34068)
@@ -38,7 +36,8 @@ To get started with this simple demonstration of inverse design for patch antenn
    python train.py
    ```
    The trained model weights will be saved as `saved-model-5000.h5`, with ‘5000’ indicating the number of iterations or a training metric.
-5. **Model Prediction and Inverse Design**
+   <img src="mlp.png" alt="MLP Diagram" style="width:600px;height:275px;">
+6. **Model Prediction and Inverse Design**
    Use the `predict.py` script to make predictions and perform inverse design.
    ```bash
    python predict.py
