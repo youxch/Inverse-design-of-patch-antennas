@@ -21,16 +21,12 @@ This repository presents a novel inverse design methodology for patch antennas u
 
 ## Getting Started
 
-To get started with the inverse design of patch antennas using this repository, please follow these steps:
+To get started with this simple demonstration of inverse design for patch antennas, follow these steps:
 
-1. **Clone the Repository**: Clone this repository to your local machine.
-2. **Install Dependencies**: Install all necessary dependencies as specified in the `requirements.txt` file.
-3. **Data Generation**: Use the provided scripts to generate or obtain the dataset required for training.
-4. **Data Preprocessing**: Preprocess the dataset as outlined in the preprocessing section.
-5. **Training**: Train the deep learning model using the training dataset.
-6. **Testing**: Test the model's performance using the testing dataset.
-7. **Prediction**: Use the trained model to predict new patch antenna designs.
-8. **Inverse Design**: Implement the inverse design process to create new patch antennas based on the predictions.
+1. **Clone the Repository**:
+   Clone this repository to your local machine using the following command:
+   ```bash
+   git clone https://github.com/username/Inverse-Design-of-Patch-Antennas.git
 
 ## Code Files
 
