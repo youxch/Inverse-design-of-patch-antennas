@@ -23,7 +23,7 @@ To get started with this simple demonstration of inverse design for patch antenn
 1. **Clone the Repository**
    Clone this repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/username/Inverse-Design-of-Patch-Antennas.git
+   git clone https://github.com/youxch/Inverse-Design-of-Patch-Antennas.git
 2. **Install Dependencies**
    Install all necessary dependencies by running:
    ```bash
