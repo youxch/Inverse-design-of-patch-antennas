@@ -6,6 +6,8 @@ The following papers have been published in relation to this repository:
 1. [Inverse Design of Reflective Metasurface Antennas Using Deep Learning from Small-Scale Statistically Random Pico-Cells](https://onlinelibrary.wiley.com/doi/full/10.1002/mop.34068)
 
 2. [Energy Efficient Design of Low-Profile Wideband Microstrip Patch Antennas Using Deep Learning](https://ieeexplore.ieee.org/document/10276793)
+
+Additionally, we have another video that demonstrates the inverse design of reflective metasurfaces. You can watch it [here](https://www.bilibili.com/video/BV1Bx4y1D7LF/?spm_id_from=333.999.0.0&vd_source=07c2e4f919ec533eb2ddf652d4ab4c9b).
 ## Overview
 
 This repository presents a novel inverse design methodology for patch antennas using deep learning techniques. The project encompasses several key components:
