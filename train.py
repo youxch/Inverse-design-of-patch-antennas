@@ -1,24 +1,13 @@
-# from __future__ import print_function
 import numpy as np
-import tensorflow as tf
 from tensorflow import keras
-
-import matplotlib.pyplot as plt
 from scipy.stats import norm
 from keras.layers import Input, Dense, Lambda
 from keras.models import Model, Sequential
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.optimizers import SGD
+from keras.optimizers import Adam
+from keras.optimizers import SGD
 from keras.models import Model
 from keras import backend as K
 from keras.models import load_model
-import tensorflow as tf
-import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-from tensorflow.python.framework.ops import disable_eager_execution
-disable_eager_execution()
-import tensorflow.python.util.deprecation as deprecation
-deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers import ReLU
 from keras.callbacks import TensorBoard
 from keras.layers import Activation
@@ -26,6 +15,8 @@ from keras.utils.generic_utils import get_custom_objects
 from keras import losses
 from keras.callbacks import EarlyStopping
 from matplotlib import pyplot as plt
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # ----------| 读取 |---------- #
 data = np.loadtxt(r'train_data.txt')
@@ -99,7 +90,6 @@ model.add(keras.layers.Dense(512, activation="relu"))
 model.add(keras.layers.Dense(402, activation="sigmoid"))
 model.summary()
 
-# early_stopping = EarlyStopping(monitor='val_loss', patience=10)
 filepath = "saved-model-{epoch:02d}.h5"
 checkpoint = keras.callbacks.ModelCheckpoint(filepath=filepath, monitor="val_loss", mode="min", save_weights_only=True, save_best_only=False, verbose=1, period=1000)
 
@@ -110,7 +100,6 @@ model_fit = model.fit(input_train, output_train, batch_size=512,
                       epochs=5000, verbose=0,
                       validation_split=0.2,
                       callbacks=[checkpoint])
-                      # callbacks=[early_stopping])
 
 # 可视化
 plt.figure()
@@ -126,27 +115,21 @@ model.load_weights("saved-model-5000.h5")
 # 对训练集上进行预测
 pre_y = model.predict(input_train)
 
-# print("mean absolute error:", keras.metrics.mean_absolute_error(output_train, pre_y))
-# print("mean squared error:", keras.metrics.mean_squared_error(output_train, pre_y))
-#
-# output_train[:, 1:] = -70 * output_train[:, 1:]
-# output_train[:, 0] = 5 * output_train[:, 0] + 5
-# pre_y[:, 1:] = -70 * pre_y[:, 1:]
-# pre_y[:, 0] = 5 * pre_y[:, 0] + 5
-#
-# # Plot S11
-# for i in range(3):
-#     index = np.random.randint(0, 2999)
-#     plt.plot(np.arange(401), output_train[index, 1:])
-#     plt.plot(np.arange(401), pre_y[index, 1:])
-#     plt.title("Train%d, Index%d" % (i + 1, index))
-#     plt.show()
-#
-# # Plot Gain
-# plt.scatter(np.arange(3000), output_train[:, 0], marker='o', s=10, c=None, edgecolors='r')
-# plt.scatter(np.arange(3000), pre_y[:, 0], marker='x', s=10, c='black')
-# plt.title("Training Gain")
-# plt.show()
+print("mean absolute error:", keras.metrics.mean_absolute_error(output_train, pre_y))
+print("mean squared error:", keras.metrics.mean_squared_error(output_train, pre_y))
+# Plot S11
+for i in range(3):
+    index = np.random.randint(0, 2999)
+    plt.plot(np.arange(401), output_train[index, 1:])
+    plt.plot(np.arange(401), pre_y[index, 1:])
+    plt.title("Train%d, Index%d" % (i + 1, index))
+    plt.show()
+
+# Plot Gain
+plt.scatter(np.arange(3000), output_train[:, 0], marker='o', s=10, c=None, edgecolors='r')
+plt.scatter(np.arange(3000), pre_y[:, 0], marker='x', s=10, c='black')
+plt.title("Training Gain")
+plt.show()
 
 # 对测试集上进行预测
 pre_y = model.predict(input_test)
@@ -166,8 +149,6 @@ for i in range(10):
     plt.plot(np.arange(401), pre_y[index, 1:])
     plt.title("Test%d, Index%d" % (i + 1, index))
     plt.show()
-
-
 
 
 # Plot Gain
