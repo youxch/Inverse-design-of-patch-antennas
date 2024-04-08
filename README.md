@@ -11,6 +11,21 @@ Additionally, we have another video that demonstrates the **inverse design of re
 
 <img src="app.jpg" alt="Designer APP" style="width:500px;height:300px;">
 
+## Update - April 8, 2024
+
+### Dependencies Update
+The `requirements.txt` file has been updated to include only four essential libraries for this project:
+
+- matplotlib==3.8.4
+- numpy==1.26.4
+- tensorflow-gpu==2.10.0
+- scipy==1.13.0
+
+### CPU Training Compatibility
+To ensure wider accessibility, the `train.py` and `predict.py` scripts have been updated to support training using only the CPU. This change allows users without a GPU to run the training and prediction processes. The code now defaults to CPU training, making it convenient for users who prefer or need to use CPU resources.
+
+Please note that while `tensorflow-gpu` is still listed as a requirement, the updated code will gracefully fallback to CPU training if a GPU is not available.
+
 ## Overview
 
 This repository presents a novel inverse design methodology for patch antennas using deep learning techniques. The project encompasses several key components:
