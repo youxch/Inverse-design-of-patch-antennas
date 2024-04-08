@@ -1,24 +1,13 @@
-# from __future__ import print_function
 import numpy as np
-import tensorflow as tf
 from tensorflow import keras
-
-import matplotlib.pyplot as plt
 from scipy.stats import norm
 from keras.layers import Input, Dense, Lambda
 from keras.models import Model, Sequential
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.optimizers import SGD
+from keras.optimizers import Adam
+from keras.optimizers import SGD
 from keras.models import Model
 from keras import backend as K
 from keras.models import load_model
-import tensorflow as tf
-import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-from tensorflow.python.framework.ops import disable_eager_execution
-disable_eager_execution()
-import tensorflow.python.util.deprecation as deprecation
-deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers import ReLU
 from keras.callbacks import TensorBoard
 from keras.layers import Activation
@@ -26,7 +15,8 @@ from keras.utils.generic_utils import get_custom_objects
 from keras import losses
 from keras.callbacks import EarlyStopping
 from matplotlib import pyplot as plt
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from train import model, index_array
 
 step = 0.5
@@ -122,18 +112,6 @@ for h in range(6 - 1, 10 + 1):  # 6-1 : 1 : 9+1
                         out_total = np.append(out_total, [np.concatenate((index[0], np.array([result[0][-3], result[0][-2], result[0][-1], Gain[0]])), axis=0)], axis=0)
 
                         if result[0, -1] > 1000:
-                            # 输出
-                            # print("Parameters:", index[0])
-                            # print("Band: %.3fGHz - %.3fGHz" % (result[0][-3], result[0][-2]))
-                            # print("BandWidth: %dMHz" % result[0][-1])  # 带宽
-                            # print("RealizedGain: %.3fdBi" % Gain[0])
-                            # print()
-
-                            # plt.plot(np.arange(401) * 0.005 + 1.5, pre_y[0, 1:])
-                            # plt.plot(np.arange(401) * 0.005 + 1.5, np.ones(401) * -10, c='black')
-                            # plt.scatter(2.45, -10, marker='x', c='r')
-                            # plt.grid('on')
-                            # plt.show()
 
                             # 存储
                             out_s11 = np.append(out_s11, [np.concatenate((index[0], np.array([result[0][-3], result[0][-2], result[0][-1], Gain[0]])), axis=0)], axis=0)
