@@ -22,6 +22,7 @@ This repository presents a novel inverse design methodology for patch antennas u
 - **Inverse Design**: Process of designing patch antennas based on the predictions from the deep learning model.
 
 ## Getting Started
+The version of python is 3.9.18. **The detailed steps for the environmental configuration will be updated soon. Please stay tuned for the latest information.**
 
 To get started with this simple demonstration of inverse design for patch antennas, follow these steps:
 
