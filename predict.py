@@ -27,7 +27,7 @@ from keras import losses
 from keras.callbacks import EarlyStopping
 from matplotlib import pyplot as plt
 
-from input import model, index_array
+from train import model, index_array
 
 step = 0.5
 out_s11 = np.empty((0, 10))
