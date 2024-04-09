@@ -13,18 +13,18 @@ Additionally, we have another video that demonstrates the **inverse design of re
 
 ## Update - April 9, 2024
 ### Code Annotations
-1. Necessary comments have been added to the code.
+Necessary comments have been added to the code.
 
 ### Training and Prediction Configuration
-2. To configure training and prediction for CPU or GPU, modify line 19 in `train.py` and `predict.py`:
+To configure training and prediction for CPU or GPU, modify line 19 in `train.py` and `predict.py`:
    - `os.environ["CUDA_VISIBLE_DEVICES"] = "-1"` for CPU-based training and prediction.
    - `os.environ["CUDA_VISIBLE_DEVICES"] = "0"` for GPU-based training and prediction. (Requires additional installation of CUDA and cuDNN.)
 
 ### CPU Usage Tips
-3. When using CPU, adjust the `count` value at line 168 in `predict.py` to control the frequency of saving predictions (dictated by available memory). The total number of prediction samples is approximately 2 million.
+When using CPU, adjust the `count` value at line 168 in `predict.py` to control the frequency of saving predictions (dictated by available memory). The total number of prediction samples is approximately 2 million.
 
 ### GPU Usage Tips
-4. For GPU usage, employ `predict-gpu.py` to significantly enhance the prediction output rate, offering a 500x speedup compared to the CPU version.
+For GPU usage, employ `predict-gpu.py` to significantly enhance the prediction output rate, offering a 500x speedup compared to the CPU version.
 
 ## Update - April 8, 2024
 
