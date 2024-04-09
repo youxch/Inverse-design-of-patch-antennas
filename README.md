@@ -81,6 +81,10 @@ To get started with this simple demonstration of inverse design for patch antenn
    ```bash
    python predict.py
    ```
+   or
+    ```bash
+   python predict-gpu.py
+   ```
    Ensure that the trained model weights file saved-model-5000.h5 is available before running predictions.
 
 ## Contact
