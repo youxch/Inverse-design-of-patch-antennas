@@ -30,11 +30,11 @@ out_max = np.empty((0, 10))
 out_total = np.empty((0, 10))
 
 # File paths for saving the output data
-S11_Save_path = "Output_Bandwidth1000+.txt"
-Gain_Save_path = "Output_Gain9.5+.txt"
-Both_Save_path = "Output_Both.txt"
+S11_Save_path = "Output_Bandwidth1000+_1.txt"
+Gain_Save_path = "Output_Gain9.5+_1.txt"
+Both_Save_path = "Output_Both_1.txt"
 MAX_Save_path = "Output_Max.txt"
-Total_Save_path = "Output_Total.txt"
+Total_Save_path = "Output_Total_1.txt"
 
 # Calculate the total number of iterations based on the parameter ranges and step size
 total_num = (5 / 1 + 1) * (12 / step + 1) * (8 / step + 1) * (4 / step + 1) * (5 / step + 1) * (4 / step + 1)
@@ -45,6 +45,9 @@ num = 0
 delta = 1000  # Interval for progress updates
 Gain_max = 0  # Maximum gain encountered
 BandWidth_max = 0  # Maximum bandwidth encountered
+
+count = 0
+iter = 1
 
 # Iterate over the parameter space
 for h in range(6 - 1, 10 + 1):  # Iterate over 'h' parameter
@@ -161,10 +164,29 @@ for h in range(6 - 1, 10 + 1):  # Iterate over 'h' parameter
                                     (index[0], np.array([result[0][-3], result[0][-2], result[0][-1], Gain[0]])),
                                     axis=0)
 
-# Save the output data to text files
-np.savetxt(S11_Save_path, out_s11, fmt='%.3f')
-np.savetxt(Gain_Save_path, out_gain, fmt='%.3f')
-np.savetxt(Both_Save_path, out_both, fmt='%.3f')
+                        count += 1
+                        if count == 100:
+                            count = 0
+                            iter += 1
+
+                            # Save the output data to text files
+                            np.savetxt(S11_Save_path, out_s11, fmt='%.3f')
+                            np.savetxt(Gain_Save_path, out_gain, fmt='%.3f')
+                            np.savetxt(Both_Save_path, out_both, fmt='%.3f')
+
+                            # Save the total output array
+                            np.savetxt(Total_Save_path, out_total, fmt='%.3f')
+
+                            out_s11 = np.empty((0, 10))
+                            out_gain = np.empty((0, 10))
+                            out_both = np.empty((0, 10))
+                            out_total = np.empty((0, 10))
+
+                            # File paths for saving the output data
+                            S11_Save_path = "Output_Bandwidth1000+_%d.txt" % iter
+                            Gain_Save_path = "Output_Gain9.5+_%d.txt" % iter
+                            Both_Save_path = "Output_Both_%d.txt" % iter
+                            Total_Save_path = "Output_Total_%d.txt" % iter
 
 # Append the maximum gain and bandwidth results to the out_max array
 out_max = np.append(out_max, [arg_gain], axis=0)
@@ -172,6 +194,3 @@ out_max = np.append(out_max, [arg_bandwidth], axis=0)
 
 # Save the out_max array
 np.savetxt(MAX_Save_path, out_max, fmt='%.3f')
-
-# Save the total output array
-np.savetxt(Total_Save_path, out_total, fmt='%.3f')
