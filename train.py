@@ -149,7 +149,7 @@ pre_y[:, 0] = 5 * pre_y[:, 0] + 5
 print(input_test)
 
 # Plot S11 for a few random samples from the test set
-for i in range(10):
+for i in range(3):
     index = np.random.randint(0, 455)
     plt.plot(np.arange(401), output_test[index, 1:], 'black')
     plt.plot(np.arange(401), pre_y[index, 1:])
