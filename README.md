@@ -12,7 +12,7 @@ Additionally, we have another video that demonstrates the **inverse design of re
 <img src="app.jpg" alt="Designer APP" style="width:500px;height:300px;">
 
 ## Update - April 15, 2024
-The information about the Python version, interpretation of the prediction results, and the simulation validation section can be found in the issue.
+The information about the Python version, interpretation of the prediction results, and the simulation validation section can be found in the issues.
 
 ## Update - April 11, 2024
 The reference design for this project is from Professor K. L. Wong's book ["Compact and Broadband Microstrip Antennas"](https://onlinelibrary.wiley.com/doi/book/10.1002/0471221112), page 237, featuring a U-slot patch antenna, as shown below for reference.
