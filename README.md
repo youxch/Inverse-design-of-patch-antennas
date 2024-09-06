@@ -12,6 +12,10 @@ Additionally, we have another video that demonstrates the **inverse design of re
 <img src="app.jpg" alt="Designer APP" style="width:500px;height:300px;">
 
 ## Update - April 15, 2024
+We have design a GUI video that demonstrates the **Fast Design of Multi-Beam Metasurface Antennas**. You can watch it [here](https://www.bilibili.com/video/BV1DbHDerEY6/?spm_id_from=333.999.0.0).
+<img src="app-multibeam.jpg" alt="Designer APP" style="width:500px;height:300px;">
+
+## Update - April 15, 2024
 The information about the Python version, interpretation of the prediction results, and the simulation validation section can be found in the issues.
 
 ## Update - April 11, 2024
