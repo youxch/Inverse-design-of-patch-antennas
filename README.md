@@ -11,6 +11,9 @@ Additionally, we have another video that demonstrates the **inverse design of re
 
 <img src="app.jpg" alt="Designer APP" style="width:500px;height:300px;">
 
+## Star ⭐⭐⭐
+If you think this repository is helpful, please give us a STAR. Thank you very much!
+
 ## Update - September 6, 2024
 We have design a GUI video that demonstrates the **Fast Design of Multi-Beam Metasurface Antennas**. You can watch it [here](https://www.bilibili.com/video/BV1DbHDerEY6/?spm_id_from=333.999.0.0).
 
